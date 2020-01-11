@@ -11,6 +11,8 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 
 class drawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -52,29 +54,31 @@ class drawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                // Handle the camera action
+                home(fr = homeFrag())
             }
             R.id.sos_contacts -> {
-
+                sos(fr = sosFrag())
             }
 
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+    private fun home(fr: homeFrag){
+        val fm=supportFragmentManager.beginTransaction()
+        fm.replace(R.id.frame,fr)
+        fm.commit()
+    }
+    private fun sos(fr: sosFrag){
+        val fm:FragmentTransaction=supportFragmentManager.beginTransaction()
+        fm.replace(R.id.frame,fr)
+        fm.commit()
     }
 }
