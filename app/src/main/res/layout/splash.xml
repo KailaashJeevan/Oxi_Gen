@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+>
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+               app:srcCompat="@drawable/oxi_gen_splash" tools:srcCompat="@drawable/oxi_gen_splash"
+               android:id="@+id/splash001" android:contentDescription="@string/splash"
+               app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

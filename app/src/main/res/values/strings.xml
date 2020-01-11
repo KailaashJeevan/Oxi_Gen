@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Oxi_Gen</string>
+    <string name="emergency_contacts">EMERGENCY CONTACTS</string>
+    <string name="enter_contact_1">ENTER CONTACT 1</string>
+    <string name="enter_contact_2">ENTER CONTACT 2</string>
+    <string name="enter_contact_3">ENTER CONTACT 3</string>
+    <string name="enter_contact_4">ENTER CONTACT 4</string>
+    <string name="enter_contact_5">ENTER CONTACT 5</string>
+    <string name="load_contacts">LOAD CONTACTS</string>
+    <string name="splash">splash</string>
+</resources>
