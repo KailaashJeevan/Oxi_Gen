@@ -23,4 +23,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="sos_contacts">SOS CONTACTS</string>
+    <string name="welcomeMessage">Hi, I am OXI_GEN, your SOS MESSENGER. Please configure your message list.If done I AM
+        READY, YOU CAN CALL ME AT ANY TIME! CLICK ON THE PINK FLOATING BUTTON TO ACTIVATE ME!
+    </string>
 </resources>
