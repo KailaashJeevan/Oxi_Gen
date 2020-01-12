@@ -15,6 +15,12 @@
               android:textSize="40sp"
               android:textColor="@color/white"
 
-              android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+              android:id="@+id/textView2" android:layout_marginTop="84dp"/>
+    <TextView android:layout_width="3dp" android:layout_height="wrap_content"
+              android:id="@+id/oput" app:layout_constraintBottom_toBottomOf="parent"
+              android:textSize="40sp" android:textColor="@color/white"
+              app:layout_constraintEnd_toEndOf="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+              android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

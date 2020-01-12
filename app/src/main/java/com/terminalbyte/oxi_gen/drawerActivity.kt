@@ -1,6 +1,8 @@
 package com.terminalbyte.oxi_gen
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -14,21 +16,35 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import kotlinx.android.synthetic.main.activity_main.*
 
 class drawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drawer)
+        home(fr = homeFrag())
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
+            val am:MediaPlayer = MediaPlayer.create(this,R.raw.ring)
+            am.stop()
             Snackbar.make(view, "SENDING EMERGENCY SIGNAL", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            try{
+                Thread.sleep(3000)
+            }catch (e:Exception){
+                e.printStackTrace()
+            }
+
+            textView2.text = "SOS SENT!"
+            am.isLooping = true
+            am.start()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
