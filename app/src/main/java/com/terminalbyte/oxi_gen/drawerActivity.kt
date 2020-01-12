@@ -33,7 +33,7 @@ class drawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             val am:MediaPlayer = MediaPlayer.create(this,R.raw.ring)
-            am.stop()
+
             Snackbar.make(view, "SENDING EMERGENCY SIGNAL", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
             try{
